@@ -23,7 +23,6 @@ public class Request {
         // 拿请求头的方法和url
         url = httpHeader.split("\\s")[1];
         method = httpHeader.split("\\s")[0];
-        System.out.println(this);
     }
 
     public String getUrl() {

@@ -63,9 +63,7 @@ public class WalkingRabbit {
     private void dispatch(Request request, Response response) {
 
         String clazz = urlServletMap.get(request.getUrl());
-        System.out.println("clazz: " + clazz);
         try{
-            System.out.println("forName: " + Class.forName(clazz));
             Class<Servlet> servletClass = (Class<Servlet>) Class.forName(clazz);
             Servlet servlet = servletClass.newInstance();
             servlet.service(request, response);
